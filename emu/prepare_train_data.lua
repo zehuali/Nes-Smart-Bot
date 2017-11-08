@@ -21,7 +21,7 @@ print(type(imagesAll))
 for f=0,size do
     print(f)
     imagesAll[f+1] = image.load('images/mario-'..f..'.png') 
-    labelsAll[f+1] = 2 -- 2 = background
+    labelsAll[f+1] = lines[f+1] -- 2 = background
 end
 
 -- print(imagesAll)
@@ -29,7 +29,7 @@ end
 -- shuffle dataset: get shuffled indices in this variable:
 local labelsShuffle = torch.randperm((#labelsAll)[1])
 
-local portionTrain = 1 -- 80% is train data, rest is test data
+local portionTrain = 0.8 -- 80% is train data, rest is test data
 local trsize = torch.floor(labelsShuffle:size(1)*portionTrain)
 local tesize = labelsShuffle:size(1) - trsize
 
