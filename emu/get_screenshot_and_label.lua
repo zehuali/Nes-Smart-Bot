@@ -14,8 +14,7 @@ map = {
     [11]={A=true, up=false, left=true, B=true, select=false, right=false, down=false, start=false},
     [12]={A=false, up=false, left=true, B=false, select=false, right=false, down=true, start=false},
     [13]={A=false, up=false, left=false, B=false, select=false, right=true, down=true, start=false},
-    [14]={A=false, up=false, left=false, B=false, select=true, right=false, down=false, start=true},
-    [15]={A=false, up=false, left=false, B=false, select=false, right=false, down=false, start=false}
+    [14]={A=false, up=false, left=false, B=false, select=false, right=false, down=false, start=false}
 }
 
 function mapjoypad(input)
@@ -25,7 +24,7 @@ function mapjoypad(input)
             return k
         end
     end
-    return 16
+    return 15
 end
 
 function compare(mapslice,input)
